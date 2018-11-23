@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Employee business object -->
+	<bean id="employeeBo" class="com.anjan.hibernate.bo.EmployeeBeanBOImpl">
+		<property name="employeeDao" ref="employeeDao" />
+	</bean>
+
+	<!-- Employee Data Access Object -->
+	<bean id="employeeDao" class="com.anjan.hibernate.dao.EmployeeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>
